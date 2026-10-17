@@ -60,6 +60,39 @@ These are recordings of the landing page's interactive demo, which runs on an in
   </tr>
 </table>
 
+### New this fall
+
+Recorded from the app's own components, running on demo data for the same invented house.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/live.gif" alt="The Board live: roommates' colour dots glow, a roommate's proof photo drops onto the board with its tape landing last, rain runs down the nav bar, and the headline folds into a top bar on scroll" width="100%"><br>
+      <strong>A house that feels lived in.</strong> Roommates' dots glow while they have the app open. When someone files a proof, it drops onto your board live. Rain runs down the nav bar's glass when it's raining outside, and the headline folds into the top bar as you scroll.
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/morph.gif" alt="Tapping a proof photo on the Wall grows the whole Polaroid into a full-screen view and shrinks it back into its tile" width="100%"><br>
+      <strong>Photo to full screen.</strong> Tap a print and the Polaroid itself grows out of its tile, then shrinks back when you close it. Built on the browser's View Transitions.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/flipbook.gif" alt="Dragging across a recurring chore's flipbook scrubs through every Sunday's kitchen photo, from cluttered to clean" width="100%"><br>
+      <strong>Flipbooks.</strong> Drag a finger across a recurring chore and flip through every proof of it in order, like a before-and-after.
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/piles.gif" alt="Standings as leaf piles: flicking a pile scatters its leaves, which drift home and rebuild it" width="100%"><br>
+      <strong>Standings as leaf piles.</strong> Each roommate's pile is as tall as their credit for the month. Flick one and it scatters, then rakes itself back up.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="assets/recap.gif" alt="Month recap story cards: proofs filed, most-done chore, fastest proof, longest streak, a collage of the month's photos, then who spins the dare wheel" width="50%"><br>
+      <strong>The month, wrapped.</strong> Full-screen story cards at month end: your most-done chore, fastest proof, longest streak, a collage of the month's photos, then the reveal of who spins the wheel. Saves as an image for the group chat.
+    </td>
+  </tr>
+</table>
+
 ## What's in it
 
 | | |
@@ -71,6 +104,10 @@ These are recordings of the landing page's interactive demo, which runs on an in
 | **Governance** | Admin and member roles, invite codes that need an admin's approval, and an audit log of admin actions. |
 | **Nudges** | Web push reminders through the day in the household's local time, plus notes, reactions and an activity feed. |
 | **Leaf Season** | A seasonal edition with an autumn palette, ambient leaves on a canvas, and a dark palette that switches at local sunset. |
+| **Live house** | Realtime presence shows who has the app open, and a roommate's proof lands on your board the moment it's filed. |
+| **Real weather** | Open-Meteo, located from the household's time zone with no permission prompt. Wind blows the leaves harder and rain streaks the nav bar. |
+| **Flipbooks & recaps** | Every proof of a recurring chore as a scrubbable flipbook, and a month-end recap in story cards that saves as a shareable image. |
+| **Sound, off by default** | A paper shutter, a stamp thud and a wheel tick, synthesised in Web Audio with no audio files. |
 
 ## How it's built
 
@@ -103,7 +140,7 @@ flowchart LR
 |---|---|
 | **Frontend** | React 19, Vite 8 and Tailwind CSS 4, in plain JavaScript. A token-driven design system with a custom motion layer, and a custom `getUserMedia` camera. |
 | **Backend** | Supabase: Postgres with row-level security, SECURITY DEFINER RPCs and trigger-enforced invariants. Plus Storage, Realtime, `pg_cron`, and a Deno edge function for Web Push. |
-| **Quality** | Vitest suites for the round-robin rotation, ledger and streak math, crew proofs, trade balancing, standings, seasonal sunset math, and copy-length budgets. Linted with oxlint. |
+| **Quality** | Vitest suites for the round-robin rotation, ledger and streak math, crew proofs, trade balancing, standings, the month recap and flipbook reductions, seasonal sunset math, and copy-length budgets. Linted with oxlint. |
 | **Shipping** | Static hosting on Vercel, installed as a PWA via Add to Home Screen. A Capacitor iOS build also exists. |
 
 ### A few things I'm proud of
