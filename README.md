@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-evening.jpg">
-    <img src="assets/banner-day.jpg" alt="Chorus: nobody downloads a chore app because things are going well at home." width="100%">
+    <img src="assets/banner-day.jpg" alt="Chorus: because 'whose turn is it?' shouldn't take a group chat to settle." width="100%">
   </picture>
 </p>
 
